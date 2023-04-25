@@ -9,7 +9,6 @@
 
 
 provider "snowflake" {
-      #account = "https://ec57383.eu-west-3.aws.snowflakecomputing.com"
       role     = "SYSADMIN"
     }
 
@@ -19,7 +18,7 @@ resource "snowflake_database" "db" {
 
 resource "snowflake_warehouse" "warehouse" {
   name           = "TF_DEMO"
-  warehouse_size = "large"
+  warehouse_size = "X-small"
 
   auto_suspend = 60
 }
